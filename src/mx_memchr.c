@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 void *mx_memchr(const void *s, int c, size_t n) {
     char *p = (char *)s;

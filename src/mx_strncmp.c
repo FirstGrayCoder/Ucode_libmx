@@ -1,4 +1,5 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
+
 int mx_strncmp(const char *s1, const char *s2, int n) {
     int count = 0;
 

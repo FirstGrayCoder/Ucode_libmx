@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 int mx_sqrt(int x) {
     for (int i = 1; i < x; i++) {
@@ -7,6 +7,8 @@ int mx_sqrt(int x) {
     }
     return 0;
 }
+
 // int main() {
 //     printf("%d\n", mx_sqrt(9));
 // }
+

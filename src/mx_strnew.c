@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 char *mx_strnew(const int size) {
     char *s = NULL;
@@ -17,3 +17,4 @@ char *mx_strnew(const int size) {
 //     printf("%s\n", mx_strnew(11));
 //     system("leaks -q a.out");
 // }
+

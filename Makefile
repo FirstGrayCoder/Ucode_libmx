@@ -1,5 +1,6 @@
 # имя библиотеки
-NAME = libmx
+NAME = libmx.a
+
 
 # папка с исходниками
 SRC_DIR = src
@@ -35,7 +36,6 @@ CC = clang
 # флаги для компилятора (добавить префикс -W ко всем записям после
 # запятой)
 CFLAGS = -std=c11 $(addprefix -W, all extra error pedantic) -g
-
 # также добавляем флаги и сюда
 # SDL_FLAGS = -rpath resource/framework -framework SDL2 \
 		-framework SDL2_image \
@@ -65,9 +65,9 @@ all: $(NAME)
 # @$(AR) $(AFLAGS) $@ $^  в зависимости от нужд можно раскаментировать для создания архива
 $(NAME): $(OBJ_FILES)
 	
-	@$(CC) $(CFLAGS) $^ -o $@ -I $(INC_DIR) 
+	@$(AR) $(AFLAGS) $@ $^
 	
-	@printf "\r\33[2K$@\t \033[32;1mcreated\033[0m\n"
+	@printf "\r\33[2K$@\t\033[32;1mcreated\033[0m\n"
 
 # перед компиляцией o-файлов создаем папку obj, про пайпы в мейкафайле
 # https://www.gnu.org/software/make/manual/html_node/Prerequisite-Types.html
@@ -91,15 +91,18 @@ $(OBJ_DIR):
 	@$(MKDIR) $@
 
 # удаляем папку с о-файлами
-clead:
-	@$(RM) $(OBJ_DIR)
+clean:
+	@$(RM) $(OBJ_DIR) a.out
 	@printf "$(OBJ_DIR) in $(NAME)\t \033[31;1mdeleted\033[0m\n"
 
 # полностью удаляем результат работы мейкфайла
-uninstall:
+uninstall: clean
 	@$(RM) $(OBJ_DIR)
 	@$(RM) $(NAME)
 	@@printf "$(NAME)\t \033[31;1muninstalled\033[0m\n"
+
+start: all
+	@$(CC) $(C_FLAGS) -I $(INC_DIR) main.c $(NAME); $(RM) a.out.dSYM/; ./a.out
 
 # удаляем и заново собираем библиотеку
 reinstall: uninstall all
@@ -107,4 +110,4 @@ reinstall: uninstall all
 # .PHONY - это явное указание имен целей мейкфайла, например, если
 # в папке будет файл clean и попытаться выполнить команду make clean,
 # то make попытается выполнить файл clean, а не цель clean
-.PHONY: all uninstall clean reinstall
+.PHONY: all uninstall clean reinstall start

@@ -1,4 +1,5 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
+
 int mx_strlen_s(const char *s, char c) {
     int count = 0;
     while(s[count] != c && s[count] !='\0') {

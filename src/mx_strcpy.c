@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 char *mx_strcpy(char *dst, const char *src) {
     int i = 0;
@@ -14,3 +14,4 @@ return dst;
 //     char dst[] = "paprr";
 //     printf("%s\n", mx_strcpy(dst, src));
 // }
+

@@ -1,9 +1,9 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 void mx_printstr(const char *s) {
     write(1, s, mx_strlen(s));
 }
-// int main() {
-//     const char *s = "hdjhdjh";
-//     mx_printstr(s);
-// }
+
+
+
+

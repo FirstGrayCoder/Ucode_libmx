@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 double mx_pow(double n, unsigned int pow) {
     double p = 1;
@@ -9,6 +9,9 @@ double mx_pow(double n, unsigned int pow) {
     }
     return p;
 }
+
 // int main() {
 //     printf("%f\n", mx_pow(5, 2));
 // }
+
+

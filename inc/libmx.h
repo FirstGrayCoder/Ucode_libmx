@@ -5,12 +5,14 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include <errno.h>
 #include <string.h>
 #include <stdbool.h>
+#include <malloc/malloc.h>
 
 #define INT_MIN -2147483648
 #define INT_MAX 2147483647
+#define LONG_MAX 9223372036854775807
+#define LONG_MIN -9223372036854775807
 
 typedef struct s_list {
     void *data;
@@ -32,11 +34,8 @@ int mx_bubble_sort(char **arr, int size); //********* РЕФРЕШ
 void mx_print_strarr(char **arr, const char *delim); // ЗРОБИВ
 char *mx_nbr_to_hex(unsigned long nbr); // КІКОФФ
 char *mx_itoa(int number); // ЗРОБИВ
-
-
-
-void mx_print_unicode(wchar_t c); // Екстра хард
-int mx_quicksort(char **arr, int left, int right); 
+void mx_print_unicode(wchar_t c); // Екстра хард -ЗРОБЛЕНО
+int mx_quicksort(char **arr, int left, int right); // -ЗРОБЛЕНО
 
 
 //-----String pack----- || 24 functions
@@ -63,9 +62,7 @@ char *mx_strtrim(const char *str); // ЗРОБИВ
 char *mx_del_extra_spaces(const char *str);  //############## Передивитись
 void mx_del_strarr(char ***arr); // ЗРОБИВ
 char *mx_replace_substr(const char *str, const char *sub, const char *replace); // ЗРОБИВ
-
-
-int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd); // Екстра хард
+int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd); // -ЗРОБЛЕНО
 
 
 //-----Memory pack----- || 9 functions
@@ -77,10 +74,7 @@ void *mx_memchr(const void *s, int c, size_t n); // ЗРОБИВ
 void *mx_memrchr(const void *s, int c, size_t n); // ЗРОБИВ
 void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len); // ЗРОБИВ
 void *mx_memmove(void *dst, const void *src, size_t len); // ЗРОБИВ
-
-
-
-void *mx_realloc(void *ptr, size_t size); 
+void *mx_realloc(void *ptr, size_t size); //-ЗРОБЛЕНО
 
 
 
@@ -89,13 +83,9 @@ t_list *mx_create_node(void *data); // ЗРОБИВ
 void mx_push_front(t_list **list, void *data); // ЗРОБИВ
 void mx_push_back(t_list **list, void *data); // ЗРОБИВ
 void mx_pop_front(t_list **head); // ЗРОБИВ
-
-
-
-
-void mx_pop_back(t_list **head); 
-int mx_list_size(t_list *list); 
-t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *));  
+void mx_pop_back(t_list **head); // ЗРОБЛЕНО
+int mx_list_size(t_list *list); // ЗРОБЛЕНО
+t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *));  //-ЗРОБЛЕНО
 
 
 
@@ -104,6 +94,11 @@ int mx_strncmp(const char *s1, const char *s2, int n);
 int mx_strlen_s(const char *s, char c);
 bool mx_isspace(char c);
 long int mx_min_to_plus(long int n); // **************** Під лібу
+int mx_tolower(int c);
+int mx_toupper(int c);
+bool mx_isalpha(int c);
+bool mx_isdigit(int c);
+int mx_atoi(const char *str);
 
 
 

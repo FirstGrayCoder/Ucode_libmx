@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 int mx_binary_search(char **arr, int size, const char *s, int *count) {  
     int i = 0;
@@ -29,3 +29,5 @@ int mx_binary_search(char **arr, int size, const char *s, int *count) {
 //     int count = 0;
 //     printf("%d\n" "%d\n", mx_binary_search(arr, 6, "aBc", &count), count);
 // }
+
+

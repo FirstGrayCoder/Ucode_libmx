@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 int mx_memcmp(const void *s1, const void *s2, size_t n) {
     int i = 0;

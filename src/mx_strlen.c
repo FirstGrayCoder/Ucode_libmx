@@ -1,5 +1,4 @@
-// #include <unistd.h>
-// #include <stdio.h>
+#include "libmx.h"
 
 int mx_strlen(const char *s) {
     int i;
@@ -7,7 +6,10 @@ int mx_strlen(const char *s) {
     }
     return i;
 }
+
+
 // int main(){
 //     const char *s = "ioo";
 //     printf("%d\n", mx_strlen(s));
 // }
+

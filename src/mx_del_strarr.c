@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 void mx_del_strarr(char ***arr) {
     char **tmp = *arr;
@@ -6,8 +6,6 @@ void mx_del_strarr(char ***arr) {
         mx_strdel(&tmp[i]);
 free(*arr);
 *arr = NULL;
-
-   
 }
 
 // int main() {
@@ -18,3 +16,5 @@ free(*arr);
 //     mx_printstr("strarr after mx_del_strarr is (null)? | "); printf("%s\n", (char *) arr);
 //     system("leaks -q a.out");
 // }
+
+

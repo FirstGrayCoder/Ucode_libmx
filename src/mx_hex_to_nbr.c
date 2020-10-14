@@ -1,10 +1,11 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 unsigned long mx_hex_to_nbr(const char *hex) {
     int lenth = 0;
     unsigned long p = 0;
     unsigned long pow = 1;
-
+    if (hex == NULL)
+    return 0;
     for (int i = 0; hex[i] != '\0'; i++)
         lenth++;
     for (int i = lenth-1; hex[i] != '\0'; i--) {
@@ -28,3 +29,4 @@ return p;
 // printf("%lu\n", mx_hex_to_nbr("-1"));
 
 // }
+

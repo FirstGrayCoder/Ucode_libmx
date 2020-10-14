@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 int mx_get_char_index(const char *str, char c) {
     if (!str)
@@ -14,3 +14,4 @@ int mx_get_char_index(const char *str, char c) {
 //     const char *str = "hhhhhj";
 //     printf("%d\n", mx_get_char_index(str, 'j'));
 // }
+

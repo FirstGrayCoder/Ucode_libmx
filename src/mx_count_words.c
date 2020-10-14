@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 int mx_count_words(const char *str, char delimiter) {
     int result = 1;
@@ -25,3 +25,5 @@ int mx_count_words(const char *str, char delimiter) {
 //     printf("%d\n", mx_count_words(s, b)); 
 //     // printf("%c", b);
 // }
+
+

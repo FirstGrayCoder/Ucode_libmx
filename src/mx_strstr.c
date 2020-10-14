@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 char *mx_strstr(const char *haystack, const char *needle) {
     if (mx_strlen(needle) == 0)
@@ -19,3 +19,4 @@ return 0;
 //     // const char s2[] = "bro";
 //     // printf("%s\n", mx_strstr(s1, s2));
 // }
+

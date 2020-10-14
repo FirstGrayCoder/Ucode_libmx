@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 void mx_printint(int n) {
     if (n == INT_MIN) {
@@ -20,3 +20,4 @@ void mx_printint(int n) {
 //     mx_printchar('\n');
 
 // }
+

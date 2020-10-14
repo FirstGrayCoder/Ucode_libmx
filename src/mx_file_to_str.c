@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 char *mx_file_to_str(const char *filename) {
     if (filename) {
@@ -8,7 +8,6 @@ char *mx_file_to_str(const char *filename) {
             char buff[64], *text = NULL;
             int rd = read(src, &buff, sizeof(buff));
             int count = rd;
-            
             if (rd) {
                 while (rd == 64) {
                     rd = read(src, &buff, sizeof(buff));

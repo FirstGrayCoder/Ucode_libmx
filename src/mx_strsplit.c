@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 char **mx_strsplit(const char *s, char c) {
     int word_length = 0;
@@ -28,3 +28,4 @@ char **mx_strsplit(const char *s, char c) {
 //     printf("%s\n", *mx_strsplit(s, b)); 
 //     // printf("%c", b);
 // }
+

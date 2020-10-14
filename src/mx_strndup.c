@@ -1,4 +1,4 @@
-#include "../inc/libmx.h"
+#include "libmx.h"
 
 char *mx_strndup(const char *s1, int n) {
     char *duplicate = NULL;
@@ -11,3 +11,4 @@ char *mx_strndup(const char *s1, int n) {
     mx_strncpy(duplicate, s1, length);
     return duplicate;
 }
+
